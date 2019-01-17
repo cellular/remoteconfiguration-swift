@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/cellular/remoteconfiguration-swift.svg?branch=master)](https://travis-ci.com/cellular/remoteconfiguration-swift)
 [![Codecov](https://codecov.io/gh/cellular/remoteconfiguration-swift/branch/master/graph/badge.svg)](https://codecov.io/gh/cellular/remoteconfiguration-swift)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/CellularRemoteConfiguration.svg)](https://cocoapods.org/pods/cellular)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/CellularRemoteConfiguration.svg)](https://cocoapods.org/pods/cellularremoteconfiguration)
 [![Swift Version](https://img.shields.io/badge/swift-4.2-orange.svg)](https://swift.org)
 ![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg)
 
