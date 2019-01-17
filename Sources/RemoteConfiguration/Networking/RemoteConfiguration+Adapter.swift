@@ -1,4 +1,3 @@
-import RemoteConfiguration
 import Networking
 
 // MARK: - Public Adapter Bridge
