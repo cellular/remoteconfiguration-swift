@@ -1,0 +1,11 @@
+{
+    "urlConfig" : {
+        "label1" : "Guten",
+        "label2" : "Tag"
+    },
+    "appUpdate" : {
+        "availableVersion" : "1.0",
+        "url" : "placeholder",
+        "type" : "Ignore"
+    }
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-lg-wsP">
+                                <rect key="frame" x="16" y="20" width="109" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ay4-Fe-0Oc">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="ServerSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eXx-9Q-t83"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Server" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKc-RT-ChT">
+                                        <rect key="frame" x="59" y="0.0" width="50" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-sj-R26">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vt-LM-IUQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="685-Cn-uNw"/>
+                                        </constraints>
+                                        <state key="normal" title="Load feed"/>
+                                        <connections>
+                                            <action selector="loadFeedPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dsd-ee-xcE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9i-if-Wiw">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Wag-n3-jz5"/>
+                                        </constraints>
+                                        <state key="normal" title="Load feed with custom provider and parser"/>
+                                        <connections>
+                                            <action selector="loadFeedWithCustomMethodsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LSh-6e-B4W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUg-yg-u4I">
+                                        <rect key="frame" x="0.0" y="70" width="375" height="30"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z7C-6l-8in"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgJ-93-TGQ">
+                                <rect key="frame" x="16" y="59" width="343" height="496"/>
+                                <color key="backgroundColor" red="0.93240129422647344" green="0.93240129422647344" blue="0.93240129422647344" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bgJ-93-TGQ" secondAttribute="trailing" id="0ML-zX-ACi"/>
+                            <constraint firstItem="Rbn-sj-R26" firstAttribute="top" secondItem="bgJ-93-TGQ" secondAttribute="bottom" constant="12" id="3ok-bx-4r0"/>
+                            <constraint firstItem="bgJ-93-TGQ" firstAttribute="top" secondItem="dBd-lg-wsP" secondAttribute="bottom" constant="8" id="4BG-jw-WY0"/>
+                            <constraint firstItem="bgJ-93-TGQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7Qk-xk-kot"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rbn-sj-R26" secondAttribute="bottom" id="X3O-bc-fZx"/>
+                            <constraint firstItem="dBd-lg-wsP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="czC-pv-A0K"/>
+                            <constraint firstItem="Rbn-sj-R26" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nbB-D7-xGa"/>
+                            <constraint firstAttribute="trailing" secondItem="Rbn-sj-R26" secondAttribute="trailing" id="oe8-l1-d10"/>
+                            <constraint firstItem="dBd-lg-wsP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pjV-Cz-MYe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearButton" destination="yUg-yg-u4I" id="gAB-Eh-tGu"/>
+                        <outlet property="loadFeedButton" destination="6Vt-LM-IUQ" id="47r-td-UTk"/>
+                        <outlet property="loadFeedWithCustomMehtodsButton" destination="N9i-if-Wiw" id="A8d-xA-zMD"/>
+                        <outlet property="responseTextView" destination="bgJ-93-TGQ" id="vsd-4z-5wK"/>
+                        <outlet property="serverSwitch" destination="ay4-Fe-0Oc" id="cJd-c5-FaG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
