@@ -1,0 +1,41 @@
+language: swift
+osx_image: xcode10.1
+
+# Dependencies
+before_install: chmod +x ./.travis/deps.sh
+install: ./.travis/deps.sh
+
+# Build Script
+before_script: chmod +x ./.travis/build.sh
+script: ./.travis/build.sh
+
+# Update Code Coverage
+after_success: bash <(curl -s https://codecov.io/bash)
+
+# Notifications
+notifications:
+    email: false
+    slack:
+        on_success: change
+        rooms:
+          - cellular:SnbeoVtpHMYrmikTbYz6OGdb#ios-informiert
+
+# Build Matrix
+matrix:
+    include:
+        # iOS
+        - env: DESTINATION="OS=12.1,name=iPhone XS Max"   SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="YES"
+        - env: DESTINATION="OS=11.3,name=iPhone X"        SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="NO"
+        - env: DESTINATION="OS=10.3.1,name=iPhone 7 Plus" SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="NO"
+        - env: DESTINATION="OS=9.3,name=iPhone 6"         SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="NO"
+        # watchOS
+        - env: DESTINATION="OS=5.0,name=Apple Watch Series 4 - 44mm" SCHEME="RemoteConfiguration watchOS" RUN_TESTS="NO" POD_LINT="NO"
+        - env: DESTINATION="OS=4.2,name=Apple Watch Series 3 - 42mm" SCHEME="RemoteConfiguration watchOS" RUN_TESTS="NO" POD_LINT="NO"
+        - env: DESTINATION="OS=3.2,name=Apple Watch Series 2 - 42mm" SCHEME="RemoteConfiguration watchOS" RUN_TESTS="NO" POD_LINT="NO"
+        - env: DESTINATION="OS=2.2,name=Apple Watch - 42mm"          SCHEME="RemoteConfiguration watchOS" RUN_TESTS="NO" POD_LINT="NO"
+        # tvOS
+        - env: DESTINATION="OS=12.1,name=Apple TV 4K"    SCHEME="RemoteConfiguration tvOS" RUN_TESTS="YES" POD_LINT="NO"
+        - env: DESTINATION="OS=11.3,name=Apple TV 4K"    SCHEME="RemoteConfiguration tvOS" RUN_TESTS="YES" POD_LINT="NO"
+        - env: DESTINATION="OS=10.2,name=Apple TV 1080p" SCHEME="RemoteConfiguration tvOS" RUN_TESTS="YES" POD_LINT="NO"
+        - env: DESTINATION="OS=9.2,name=Apple TV 1080p"  SCHEME="RemoteConfiguration tvOS" RUN_TESTS="YES" POD_LINT="NO"
+
