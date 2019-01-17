@@ -24,9 +24,9 @@ notifications:
 matrix:
     include:
         # iOS
-        - env: DESTINATION="OS=12.1,name=iPhone XS Max"   SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="YES"
-        - env: DESTINATION="OS=11.3,name=iPhone X"        SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="NO"
-        - env: DESTINATION="OS=10.3.1,name=iPhone 7 Plus" SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="NO"
+        #- env: DESTINATION="OS=12.1,name=iPhone XS Max"   SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="YES"
+        #- env: DESTINATION="OS=11.3,name=iPhone X"        SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="NO"
+        #- env: DESTINATION="OS=10.3.1,name=iPhone 7 Plus" SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="NO"
         - env: DESTINATION="OS=9.3,name=iPhone 6"         SCHEME="RemoteConfiguration iOS" RUN_TESTS="YES" POD_LINT="NO"
         # watchOS
         - env: DESTINATION="OS=5.0,name=Apple Watch Series 4 - 44mm" SCHEME="RemoteConfiguration watchOS" RUN_TESTS="NO" POD_LINT="NO"
@@ -35,7 +35,7 @@ matrix:
         - env: DESTINATION="OS=2.2,name=Apple Watch - 42mm"          SCHEME="RemoteConfiguration watchOS" RUN_TESTS="NO" POD_LINT="NO"
         # tvOS
         - env: DESTINATION="OS=12.1,name=Apple TV 4K"    SCHEME="RemoteConfiguration tvOS" RUN_TESTS="YES" POD_LINT="NO"
-        - env: DESTINATION="OS=11.3,name=Apple TV 4K"    SCHEME="RemoteConfiguration tvOS" RUN_TESTS="YES" POD_LINT="NO"
-        - env: DESTINATION="OS=10.2,name=Apple TV 1080p" SCHEME="RemoteConfiguration tvOS" RUN_TESTS="YES" POD_LINT="NO"
+        #- env: DESTINATION="OS=11.3,name=Apple TV 4K"    SCHEME="RemoteConfiguration tvOS" RUN_TESTS="YES" POD_LINT="NO"
+        #- env: DESTINATION="OS=10.2,name=Apple TV 1080p" SCHEME="RemoteConfiguration tvOS" RUN_TESTS="YES" POD_LINT="NO"
         - env: DESTINATION="OS=9.2,name=Apple TV 1080p"  SCHEME="RemoteConfiguration tvOS" RUN_TESTS="YES" POD_LINT="NO"
 
