@@ -22,9 +22,9 @@ Pod::Spec.new do |spec|
 
     # Networking Subspec
     spec.subspec 'Networking' do |sub|
-        sub.dependency 'CellularRemoteConfiguration/Core'
         sub.dependency 'CellularNetworking', '~> 5.0'
-        sub.source_files = 'Sources/RemoteConfiguration/Core/**/*.swift'
+        sub.dependency 'CellularRemoteConfiguration/Core'
+        sub.source_files = 'Sources/RemoteConfiguration/Networking/**/*.swift'
     end
 
     # Convenience Subspec

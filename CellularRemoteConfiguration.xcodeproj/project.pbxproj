@@ -65,6 +65,7 @@
 		284E93BF21F09D3500680B6B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E939821F09D3500680B6B /* Configuration.swift */; };
 		284E93C021F09D3500680B6B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E939821F09D3500680B6B /* Configuration.swift */; };
 		284E93C121F09D3500680B6B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284E939821F09D3500680B6B /* Configuration.swift */; };
+		2850D4C421F0BC310008506A /* RemoteConfiguration+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2850D4C321F0BC310008506A /* RemoteConfiguration+Adapter.swift */; };
 		5434DB64C29A4C5AA1CA331B /* Pods_RemoteConfiguration_RemoteConfiguration_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C00097E9B03F8AA3AD5DB2 /* Pods_RemoteConfiguration_RemoteConfiguration_iOS.framework */; };
 		630800F2BCD2F74E75871AC0 /* Pods_RemoteConfiguration_tvOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AE17680876CDC11543DC3A0 /* Pods_RemoteConfiguration_tvOSTests.framework */; };
 		78EC37EE0490F117B72130B6 /* Pods_RemoteConfiguration_RemoteConfiguration_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAC993471882AA053B21A5C /* Pods_RemoteConfiguration_RemoteConfiguration_tvOS.framework */; };
@@ -127,6 +128,7 @@
 		284E939721F09D3500680B6B /* UpdateContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateContext.swift; sourceTree = "<group>"; };
 		284E939821F09D3500680B6B /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		284E939A21F09D3500680B6B /* DefaultUpdateHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultUpdateHandler.swift; sourceTree = "<group>"; };
+		2850D4C321F0BC310008506A /* RemoteConfiguration+Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemoteConfiguration+Adapter.swift"; sourceTree = "<group>"; };
 		41B71E02BFAC8684B2CF51A5 /* Pods-RemoteConfiguration-RemoteConfiguration tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemoteConfiguration-RemoteConfiguration tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RemoteConfiguration-RemoteConfiguration tvOS/Pods-RemoteConfiguration-RemoteConfiguration tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		4D5B7E3A7E393350DD426566 /* Pods_RemoteConfiguration_RemoteConfiguration_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteConfiguration_RemoteConfiguration_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C00097E9B03F8AA3AD5DB2 /* Pods_RemoteConfiguration_RemoteConfiguration_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteConfiguration_RemoteConfiguration_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +256,7 @@
 		284E938A21F09D3500680B6B /* RemoteConfiguration */ = {
 			isa = PBXGroup;
 			children = (
+				2850D4C221F0BB580008506A /* Networking */,
 				284E938B21F09D3500680B6B /* Core */,
 				284E939921F09D3500680B6B /* Convenience */,
 			);
@@ -286,6 +289,14 @@
 				284E939A21F09D3500680B6B /* DefaultUpdateHandler.swift */,
 			);
 			path = Convenience;
+			sourceTree = "<group>";
+		};
+		2850D4C221F0BB580008506A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2850D4C321F0BC310008506A /* RemoteConfiguration+Adapter.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		3B9BB5B52E4849F3B54A169E /* Frameworks */ = {
@@ -803,6 +814,7 @@
 				284E939E21F09D3500680B6B /* ConfigurationContext.swift in Sources */,
 				284E93A121F09D3500680B6B /* Manager.swift in Sources */,
 				284E939B21F09D3500680B6B /* UpdateType.swift in Sources */,
+				2850D4C421F0BC310008506A /* RemoteConfiguration+Adapter.swift in Sources */,
 				284E93A721F09D3500680B6B /* UpdateOption.swift in Sources */,
 				284E93B021F09D3500680B6B /* Provider.swift in Sources */,
 				284E93B321F09D3500680B6B /* State.swift in Sources */,
