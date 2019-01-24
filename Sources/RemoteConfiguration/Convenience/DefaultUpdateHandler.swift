@@ -14,7 +14,7 @@ public final class DefaultUpdateHandler {
     /// Initializes the update handler using the specified remote configuration manager.
     ///
     /// - Parameter configManager: the remote configuration manager used to load and process the remote configuration
-    init(manager: Manager) {
+    public init(manager: Manager) {
         self.manager = manager
     }
 

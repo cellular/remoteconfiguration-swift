@@ -35,7 +35,7 @@ public final class Manager {
     // MARK: - Public Properties
 
     /// The request, initiated by the provider on `requestConfiguration:`, managed by `self` and responsible for receiving the config data.
-    private var request: Request?
+    private(set) public var request: Request?
 
     /// The URL from which the configuration data is to be loaded.
     public let url: URL
