@@ -1,0 +1,42 @@
+{
+  "customKey": "customValue",
+  "urlConfig": {
+    "configKey": "configValue"
+  },
+  "appUpdate": {
+    "availableVersion": "1.2",
+    "url": "https://itunes.apple.com/",
+    "type": "ignore",
+    "localizedStrings": [
+      {
+        "languageCode": "de",
+        "title": "UpdateTitle_de",
+        "text": "UpdateText_de",
+        "options": [
+          {
+            "title": "Button1_de"
+          },
+          {
+            "title": "Button2_de",
+            "isUpdateAction": true
+          }
+        ]
+      },
+      {
+        "languageCode": "en",
+        "regionCode": "US",
+        "title": "UpdateTitle_enUS",
+        "text": "UpdateText_enUS",
+        "options": [
+          {
+            "title": "Button1_enUS"
+          },
+          {
+            "title": "Button2_enUS",
+            "isUpdateAction": true
+          }
+        ]
+      }
+    ]
+  }
+}
