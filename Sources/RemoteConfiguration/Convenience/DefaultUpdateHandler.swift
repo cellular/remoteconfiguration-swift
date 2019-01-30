@@ -1,5 +1,6 @@
 import UIKit
 
+#if os(iOS)
 /// Default Implementation to handle RemoteConfiguration updates.
 ///
 /// INFO:
@@ -107,3 +108,4 @@ public final class DefaultUpdateHandler {
         UIApplication.shared.openURL(url)
     }
 }
+#endif
