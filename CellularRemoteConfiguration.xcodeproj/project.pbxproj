@@ -413,7 +413,6 @@
 				15230A281E3245F800721BC6 /* Sources */,
 				15230A291E3245F800721BC6 /* Frameworks */,
 				15230A2A1E3245F800721BC6 /* Resources */,
-				5A9A04DBDEECBCCC9E32AD77 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -453,7 +452,6 @@
 				15E5AEA31DBA1EEA00B7DF05 /* Sources */,
 				15E5AEA41DBA1EEA00B7DF05 /* Frameworks */,
 				15E5AEA51DBA1EEA00B7DF05 /* Resources */,
-				8D0B3D6A9BE44F4F53EEE130 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -606,34 +604,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A9A04DBDEECBCCC9E32AD77 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RemoteConfiguration tvOSTests/Pods-RemoteConfiguration tvOSTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire-tvOS/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/CELLULAR-tvOS/CELLULAR.framework",
-				"${BUILT_PRODUCTS_DIR}/CellularLocalStorage-tvOS/LocalStorage.framework",
-				"${BUILT_PRODUCTS_DIR}/CellularNetworking-tvOS/Networking.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CELLULAR.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LocalStorage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Networking.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemoteConfiguration tvOSTests/Pods-RemoteConfiguration tvOSTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5C00BEDF2C4A03861CBE7CC4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -676,34 +646,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D0B3D6A9BE44F4F53EEE130 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RemoteConfiguration iOSTests/Pods-RemoteConfiguration iOSTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/CELLULAR-iOS/CELLULAR.framework",
-				"${BUILT_PRODUCTS_DIR}/CellularLocalStorage-iOS/LocalStorage.framework",
-				"${BUILT_PRODUCTS_DIR}/CellularNetworking-iOS/Networking.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CELLULAR.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LocalStorage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Networking.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RemoteConfiguration iOSTests/Pods-RemoteConfiguration iOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B435DE78EFB4A5D243B1523A /* [CP] Check Pods Manifest.lock */ = {

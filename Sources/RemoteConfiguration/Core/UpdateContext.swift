@@ -36,7 +36,7 @@ public struct UpdateContext: Codable {
     /// The version of the available update
     public let availableVersion: String
 
-    /// The frequency in which the update dialog should be presented to the User in case of a recommended update.
+    /// The frequency with which the update dialog should be presented to the User in case of a recommended update.
     /// Mandatory updates and Ingore updates will have a frequency of 'always', which is the default value.
     /// Once a recommended update with a frequency of 'once' has been discarded by the user, no further dialogs should be presented
     /// for this update version.
@@ -47,6 +47,26 @@ public struct UpdateContext: Codable {
 
     /// The alert (containing title, text and buttons) to be displayed in an update dialog
     public let localizedAlerts: [UpdateAlert]?
+
+    /// Initializes a new UpdateContext with the specified Parameters.
+    /// This allows Clients to create a custom Configuration instance manually if required.
+    ///
+    /// - Parameters:
+    ///   - updateUrl: The AppStore URL of the App
+    ///   - availableVersion: The latest available version of the App
+    ///   - alertFrequency: The frequency in which a 'recommended' update dialog should be presented
+    ///   - updateType: The associated update type
+    ///   - localizedAlerts: The alert to be displayed in an update dialog
+    public init(updateUrl: String, availableVersion: String, alertFrequency: AlertFrequency,
+                updateType: UpdateType, localizedAlerts: [UpdateAlert]) {
+        self.updateUrl = updateUrl
+        self.availableVersion = availableVersion
+        self.alertFrequency = alertFrequency
+        self.updateType = updateType
+        self.localizedAlerts = localizedAlerts
+    }
+
+    // MARK: Codable
 
     /// Maps the native properties to their JSON key equivalent for encoding and decoding.
     enum CodingKeys: String, CodingKey {

@@ -22,6 +22,14 @@ public struct UpdateOption: Codable {
     /// A boolean indicating if the option defines the 'update' action to be executed when the user selects it.
     public let isUpdateAction: Bool
 
+    /// Creates a new UpdateAction using the specified properties.
+    public init(title: String, isUpdateAction: Bool) {
+        self.title = title
+        self.isUpdateAction = isUpdateAction
+    }
+
+    // MARK: Codable
+
     /// Maps the native properties to their JSON key equivalent for encoding and decoding.
     enum CodingKeys: String, CodingKey {
         case title

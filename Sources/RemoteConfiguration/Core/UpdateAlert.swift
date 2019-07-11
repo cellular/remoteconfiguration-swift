@@ -34,6 +34,15 @@ public struct UpdateAlert: Codable {
 
     /// The options to be chosen by the user within the update dialog (e.g. trigger update or skip update)
     public let options: [UpdateOption]
+
+    /// Creates a new UpdateAlert using the specified properties.
+    public init(languageCode: String?, regionCode: String?, title: String, text: String, options: [UpdateOption]) {
+        self.languageCode = languageCode
+        self.regionCode = regionCode
+        self.title = title
+        self.text = text
+        self.options = options
+    }
 }
 
 extension Collection where Element == UpdateAlert {

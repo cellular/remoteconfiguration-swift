@@ -79,6 +79,14 @@ public final class Manager {
         cache.clear()
     }
 
+    /// Tries to load the last loaded remote configuration data from the Manager's cache using the specified Deserializer.
+    /// - Parameter deserializer: The Deserializer implementation to be used to create the resulting configuration model
+    /// - Returns: The last loaded configuration model or nil if the cache is empty or the model could not be deserialized
+    public func loadFromCache<T: Deserializer>(using deserializer: T) -> T.Model? {
+        guard let data = cache.lastLoadedConfiguration else { return nil }
+        return try? deserializer.deserialize(from: data)
+    }
+
     /// Requests remote configuration data from the associated URL using the associated Provider and Deserializer.
     /// Executes the completion closure on either success or failure, with appropriate values.
     /// - Parameter provider: The Provider implementation to be used to request the configuration data
