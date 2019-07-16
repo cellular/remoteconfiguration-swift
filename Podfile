@@ -11,27 +11,27 @@ abstract_target 'RemoteConfiguration' do
     pod 'SwiftLint', :configuration => 'Debug'
 
     # Dependencies
-    pod 'CELLULAR/Result', '~> 4.1'
-    pod 'CellularNetworking', '~> 5.0'
-    pod 'CellularLocalStorage', '~> 4.2'
+    pod 'CellularNetworking/Core', :git => 'git@github.com:markuswntr/networking-swift.git', :branch => 'master'
+    pod 'CellularLocalStorage', '~> 5.0'
 
     # Targets & Tests
 
     target 'RemoteConfiguration iOS' do
-        platform :ios, '9.0'
+        platform :ios, '10.3'
         target 'RemoteConfiguration iOSTests' do
             inherit! :search_paths
         end
     end
 
     target 'RemoteConfiguration tvOS' do
-        platform :tvos, '9.0'
+        platform :tvos, '10.2'
         target 'RemoteConfiguration tvOSTests' do
             inherit! :search_paths
         end
     end
 
     target 'RemoteConfiguration watchOS' do
-        platform :watchos, '2.0'
+        platform :watchos, '3.0'
     end
 end
+

@@ -7,17 +7,17 @@ Pod::Spec.new do |spec|
     spec.license     = { :type => 'MIT', :file => 'LICENSE' }
     spec.source      = { :git => 'https://github.com/cellular/remoteconfiguration-swift.git', :tag => spec.version.to_s }
     spec.module_name = 'RemoteConfiguration'
-    spec.swift_version = '4.2'
+    spec.swift_version = '5.0'
 
     # Deployment Targets
-    spec.ios.deployment_target     = '9.0'
-    spec.tvos.deployment_target    = '9.0'
-    spec.watchos.deployment_target = '2.0'
+    spec.ios.deployment_target = '10.3'
+    spec.tvos.deployment_target = '10.2'
+    spec.watchos.deployment_target = '3.0'
 
     # Core Subspec
     spec.subspec 'Core' do |sub|
-        sub.dependency 'CELLULAR/Result', '~> 4.1'
-        sub.dependency 'CellularLocalStorage', '~> 4.2'
+        sub.dependency 'CELLULAR/Result', '~> 5.0'
+        sub.dependency 'CellularLocalStorage', '~> 5.0'
         sub.source_files = 'Sources/RemoteConfiguration/Core/**/*.swift'
     end
 

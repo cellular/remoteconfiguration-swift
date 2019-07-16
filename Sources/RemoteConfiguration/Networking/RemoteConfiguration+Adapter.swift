@@ -63,7 +63,7 @@ private struct RemoteConfigurationAdapterProvider: RemoteConfiguration.Provider 
                 }
                 success(data)
             case let .failure(error):
-                failure(RemoteConfiguration.Error.provider(message: error.description))
+                failure(RemoteConfiguration.Error.provider(message: error.localizedDescription))
             }
         })
 

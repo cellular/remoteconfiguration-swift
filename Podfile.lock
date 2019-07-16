@@ -1,46 +1,45 @@
 PODS:
-  - Alamofire (4.8.1)
-  - CELLULAR/Locking (4.1.0)
-  - CELLULAR/Result (4.1.0)
-  - CellularLocalStorage (4.2.0):
-    - CellularLocalStorage/Core (= 4.2.0)
-  - CellularLocalStorage/Core (4.2.0):
-    - CELLULAR/Locking (~> 4.1.0)
-    - CELLULAR/Result (~> 4.1.0)
-  - CellularNetworking (5.0.1):
-    - CellularNetworking/Alamofire (= 5.0.1)
-    - CellularNetworking/Codable (= 5.0.1)
-  - CellularNetworking/Alamofire (5.0.1):
-    - Alamofire (~> 4.7)
-    - CellularNetworking/Core
-  - CellularNetworking/Codable (5.0.1):
-    - CellularNetworking/Core
-  - CellularNetworking/Core (5.0.1):
-    - CELLULAR/Locking (~> 4.1.0)
-    - CELLULAR/Result (~> 4.1.0)
-  - SwiftLint (0.30.1)
+  - CELLULAR/Locking (5.1)
+  - CellularLocalStorage (5.0.1):
+    - CellularLocalStorage/Core (= 5.0.1)
+  - CellularLocalStorage/Core (5.0.1):
+    - CELLULAR/Locking (~> 5.0)
+  - CellularNetworking/Core (5.1):
+    - CELLULAR/Locking (~> 5.1)
+  - SwiftLint (0.33.1)
 
 DEPENDENCIES:
-  - CELLULAR/Result (~> 4.1)
-  - CellularLocalStorage (~> 4.2)
-  - CellularNetworking (~> 5.0)
+  - "CellularLocalStorage (from `git@github.com:cellular/localstorage-swift.git`, branch `master`)"
+  - "CellularNetworking/Core (from `git@github.com:markuswntr/networking-swift.git`, branch `master`)"
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Alamofire
     - CELLULAR
-    - CellularLocalStorage
-    - CellularNetworking
     - SwiftLint
 
+EXTERNAL SOURCES:
+  CellularLocalStorage:
+    :branch: master
+    :git: "git@github.com:cellular/localstorage-swift.git"
+  CellularNetworking:
+    :branch: master
+    :git: "git@github.com:markuswntr/networking-swift.git"
+
+CHECKOUT OPTIONS:
+  CellularLocalStorage:
+    :commit: 826e4b59f3937775e3af689d9b8f0fe22ea44bbb
+    :git: "git@github.com:cellular/localstorage-swift.git"
+  CellularNetworking:
+    :commit: a941d6ff531b022ddb6591f0b02881fa266c91d8
+    :git: "git@github.com:markuswntr/networking-swift.git"
+
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  CELLULAR: 6af608774a6d7fed3a77b998aac37e5c6750beec
-  CellularLocalStorage: a602d529be743e482d7eba48b8ed4f9d9d94ae3d
-  CellularNetworking: d29a8ecd53c8ab9c6a835e06a10b6fb1ca9d6532
-  SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
+  CELLULAR: 5627305dc6b3df9d7d966f245b5db5cd6ec1ecb8
+  CellularLocalStorage: a9d81272e5cd8138f22a136e76b4effe55000969
+  CellularNetworking: 76992a91b45378d44ded34a8b9e3e39cd38c7c6d
+  SwiftLint: 9fc1143bbacec37f94994a7d0d2a85b2154b6294
 
-PODFILE CHECKSUM: 62edf68dfe143fc17ecec9c87625264bf5c7dc60
+PODFILE CHECKSUM: 526a7b3e3f69d1dba9ecd593f7656fce13c447e5
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.7.4
