@@ -16,7 +16,6 @@ Pod::Spec.new do |spec|
 
     # Core Subspec
     spec.subspec 'Core' do |sub|
-        sub.dependency 'CELLULAR/Result', '~> 5.0'
         sub.dependency 'CellularLocalStorage', '~> 5.0'
         sub.source_files = 'Sources/RemoteConfiguration/Core/**/*.swift'
     end
