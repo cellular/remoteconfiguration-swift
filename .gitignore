@@ -3,6 +3,7 @@ build/
 DerivedData/
 
 ## Various settings
+/*xcodeproj
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -30,16 +31,4 @@ playground.xcworkspace
 
 # Swift Package Manager
 .build/
-
-# CocoaPods
-Pods/
-
-# Carthage
-Carthage/Checkouts
-Carthage/Build
-
-# fastlane
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+.swiftpm

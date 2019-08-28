@@ -105,7 +105,7 @@ public final class DefaultUpdateHandler {
         guard let url = URL(string: url) else {
             return
         }
-        UIApplication.shared.openURL(url)
+        UIApplication.shared.open(url)
     }
 }
 #endif
