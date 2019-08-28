@@ -1,7 +1,0 @@
-line_length: 140
-included:
-  - Sources
-excluded:
-  - Pods
-  - Example
-  - Tests

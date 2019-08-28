@@ -60,7 +60,7 @@ class ConfigurationCache {
     // MARK: - Private functions
 
     private func loadContext() -> ConfigurationContext? {
-        let decoder = NativeDecoder<ConfigurationContext>(decoder: JSONDecoder())
+        let decoder = FoundationDecoder<ConfigurationContext>(decoder: JSONDecoder())
         let result = manager.first(from: StorageIdentifier.configurationContext.rawValue, using: decoder)
         switch result {
         case .success(let context): return context
@@ -69,7 +69,7 @@ class ConfigurationCache {
     }
 
     private func saveContext(_ context: ConfigurationContext) {
-        let encoder = NativeEncoder<ConfigurationContext>(encoder: JSONEncoder())
+        let encoder = FoundationEncoder<ConfigurationContext>(encoder: JSONEncoder())
         manager.replaceAll(in: StorageIdentifier.configurationContext.rawValue, with: [context], using: encoder)
     }
 }

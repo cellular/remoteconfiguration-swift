@@ -1,3 +1,4 @@
+import Foundation
 import Networking
 
 // MARK: - Public Adapter Bridge
@@ -63,7 +64,7 @@ private struct RemoteConfigurationAdapterProvider: RemoteConfiguration.Provider 
                 }
                 success(data)
             case let .failure(error):
-                failure(RemoteConfiguration.Error.provider(message: error.description))
+                failure(RemoteConfiguration.Error.provider(message: error.localizedDescription))
             }
         })
 
