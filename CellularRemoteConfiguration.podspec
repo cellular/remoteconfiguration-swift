@@ -16,14 +16,14 @@ Pod::Spec.new do |spec|
 
     # Core Subspec
     spec.subspec 'Core' do |sub|
-        sub.dependency 'CELLULAR/Result', '=> 6.0.0'
-        sub.dependency 'CellularLocalStorage', '=> 6.0.0'
+        sub.dependency 'CELLULAR/Result', '~> 6.0.0'
+        sub.dependency 'CellularLocalStorage', '~> 6.0.0'
         sub.source_files = 'Sources/RemoteConfiguration/Core/**/*.swift'
     end
 
     # Networking Subspec
     spec.subspec 'Networking' do |sub|
-        sub.dependency 'CellularNetworking', '=> 6.0.0'
+        sub.dependency 'CellularNetworking', '~> 6.0.0'
         sub.dependency 'CellularRemoteConfiguration/Core'
         sub.source_files = 'Sources/RemoteConfiguration/Networking/**/*.swift'
     end
