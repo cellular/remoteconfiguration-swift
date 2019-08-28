@@ -6,19 +6,17 @@ set -o pipefail; # xcpretty
 xcodebuild -version;
 xcodebuild -showsdks;
 
+# Generate xcodeproj for building/testing
+swift package generate-xcodeproj;
+
 # Build Framework in Debug and Run Tests if specified
-if [ $RUN_TESTS == "YES" ]; then
-    xcodebuild -workspace "CellularRemoteConfiguration.xcworkspace" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+if [ $RUN_TESTS == "NO" ]; then
+    xcodebuild -project RemoteConfiguration.xcodeproj -scheme RemoteConfiguration-Package -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO | xcpretty;
 else
-    xcodebuild -workspace "CellularRemoteConfiguration.xcworkspace" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
-fi
-# Build Framework in Release and Run Tests if specified
-if [ $RUN_TESTS == "YES" ]; then
-    xcodebuild -workspace "CellularRemoteConfiguration.xcworkspace" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
-else
-    xcodebuild -workspace "CellularRemoteConfiguration.xcworkspace" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
+    xcodebuild test -project RemoteConfiguration.xcodeproj -scheme RemoteConfiguration-Package -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES | xcpretty;
 fi
 # Run `pod lib lint` if specified
 if [ $POD_LINT == "YES" ]; then
+	gem install cocoapods --no-document --quiet;
     pod lib lint;
 fi
