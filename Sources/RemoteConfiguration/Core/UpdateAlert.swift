@@ -18,7 +18,7 @@ import Foundation
 ///     ]
 /// }
 /// ```
-public struct UpdateAlert: Codable {
+public struct UpdateAlert: Codable, Equatable {
 
     /// The language code of the localized strings within `self` (e.g. "en")
     public let languageCode: String?

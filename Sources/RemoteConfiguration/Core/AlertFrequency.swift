@@ -5,7 +5,7 @@ import Foundation
 /// - always: The update dialog should always be presented after the UpdateContext has been processed and evaluated.
 /// - once: The update dialog should only be presented once. If the user decides to discard the update, the dialog should not
 ///         be displayed again for the given update version.
-public enum AlertFrequency: String, Codable {
+public enum AlertFrequency: String, Codable, Equatable {
     case always
     case once
 }

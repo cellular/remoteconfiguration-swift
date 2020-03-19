@@ -28,7 +28,7 @@ import Foundation
 ///     ]
 /// }
 /// ```
-public struct UpdateContext: Codable {
+public struct UpdateContext: Codable, Equatable {
 
     /// The URL to open on update action
     public let updateUrl: String

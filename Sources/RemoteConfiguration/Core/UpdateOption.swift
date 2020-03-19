@@ -14,7 +14,7 @@ import Foundation
 ///     }
 /// ]
 /// ```
-public struct UpdateOption: Codable {
+public struct UpdateOption: Codable, Equatable {
 
     /// The text to be displayed for the option.
     public let title: String
