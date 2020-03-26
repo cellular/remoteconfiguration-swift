@@ -9,7 +9,7 @@ let package = Package(
         .watchOS(.v5)
     ],
     products: [
-        .library(name: "RemoteConfiguration", targets: ["RemoteConfiguration"])
+        .library(name: "RemoteConfiguration", type: .dynamic, targets: ["RemoteConfiguration"])
     ],
     dependencies: [
         .package(url: "https://github.com/cellular/cellular-swift.git", from: "6.0.0"),
