@@ -12,7 +12,7 @@ let package = Package(
         .library(name: "RemoteConfiguration", type: .dynamic, targets: ["RemoteConfiguration"])
     ],
     dependencies: [
-        .package(url: "https://github.com/cellular/cellular-swift.git", from: "6.0.0"),
+        .package(url: "https://github.com/cellular/cellular-swift.git", .branch("master")),
         .package(url: "https://github.com/cellular/networking-swift.git", from: "6.0.0"),
         .package(url: "https://github.com/cellular/localstorage-swift.git", from: "6.0.0")
     ],
