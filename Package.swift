@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/cellular/cellular-swift.git", .branch("master")),
-        .package(url: "https://github.com/cellular/networking-swift.git", from: "6.0.0"),
+        .package(url: "https://github.com/cellular/networking-swift.git", .branch("master")),
         .package(url: "https://github.com/cellular/localstorage-swift.git", .branch("master"))
     ],
     targets: [
