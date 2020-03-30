@@ -14,27 +14,27 @@
         "package": "CELLULAR",
         "repositoryURL": "https://github.com/cellular/cellular-swift.git",
         "state": {
-          "branch": null,
-          "revision": "2e1108028fb08424a870ad5406c4757e35810330",
-          "version": "6.0.1"
+          "branch": "feature/xcode_11.4",
+          "revision": "78eebd953b4f4665cdae9b4e8a940d2fdc99d22c",
+          "version": null
         }
       },
       {
         "package": "LocalStorage",
         "repositoryURL": "https://github.com/cellular/localstorage-swift.git",
         "state": {
-          "branch": null,
-          "revision": "a3a3d7acbf8158e2c6463d280b749ae749ae8359",
-          "version": "6.0.0"
+          "branch": "feature/xcode_11.4",
+          "revision": "e2021714ebefe6ea89b86f758b8d13b3a7dbcd59",
+          "version": null
         }
       },
       {
         "package": "Networking",
         "repositoryURL": "https://github.com/cellular/networking-swift.git",
         "state": {
-          "branch": null,
-          "revision": "a82aebb3281bce812cab2f66bab036b75f1bb1a8",
-          "version": "6.0.0"
+          "branch": "feature/xcode_11.4",
+          "revision": "7f60baaf1f424d44609aa4aae8492ccc840a7277",
+          "version": null
         }
       }
     ]
