@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "75bba56748359f297a83f620d45f72cf4ebee4e7",
-          "version": "4.8.2"
+          "revision": "fca036f7aeca07124067cb6e0c12b0ad6359e3d4",
+          "version": "5.1.0"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/cellular/networking-swift.git",
         "state": {
           "branch": null,
-          "revision": "a82aebb3281bce812cab2f66bab036b75f1bb1a8",
-          "version": "6.0.0"
+          "revision": "95fd89e0f10ea33fd01c8dab0675317c3c70f059",
+          "version": "6.1.0"
         }
       }
     ]

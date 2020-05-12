@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.version       = '6.0.1'
+    spec.version       = '6.1.0'
     spec.swift_version = '5.1'
     spec.module_name   = 'RemoteConfiguration'
     spec.name          = 'CellularRemoteConfiguration'
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
 
     # Networking Subspec
     spec.subspec 'Networking' do |sub|
-        sub.dependency 'CellularNetworking', '~> 6.0.0'
+        sub.dependency 'CellularNetworking', '~> 6.1.0'
         sub.dependency 'CellularRemoteConfiguration/Core'
         sub.source_files = 'Sources/RemoteConfiguration/Networking/**/*.swift'
     end
