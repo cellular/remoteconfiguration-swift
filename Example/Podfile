@@ -3,7 +3,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 # Project Settings
 project 'Example'
-platform :ios, '9.0'
+platform :ios, '12.0'
 
 # Project Options
 inhibit_all_warnings!
@@ -11,7 +11,8 @@ use_frameworks!
 
 target "Example" do
   pod "CellularRemoteConfiguration", :path => "../"
-  pod "Alamofire", "~> 4.7"
+  pod "CellularNetworking", "~> 6.1.0"
+  pod "Alamofire", "~> 5.0"
   pod "Unbox", "~> 2.4.0"
   pod "OHHTTPStubs/Swift"
   pod "OHHTTPStubs", "~> 5.2.3"

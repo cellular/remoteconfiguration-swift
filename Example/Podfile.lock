@@ -1,17 +1,24 @@
 PODS:
-  - Alamofire (4.8.1)
-  - CELLULAR/Locking (4.1.0)
-  - CELLULAR/Result (4.1.0)
-  - CellularLocalStorage (4.2.0):
-    - CellularLocalStorage/Core (= 4.2.0)
-  - CellularLocalStorage/Core (4.2.0):
-    - CELLULAR/Locking (~> 4.1.0)
-    - CELLULAR/Result (~> 4.1.0)
-  - CellularRemoteConfiguration (5.0):
-    - CellularRemoteConfiguration/Core (= 5.0)
-  - CellularRemoteConfiguration/Core (5.0):
-    - CELLULAR/Result (~> 4.1)
-    - CellularLocalStorage (~> 4.2)
+  - Alamofire (5.0.5)
+  - CELLULAR/Locking (6.0.1)
+  - CellularLocalStorage (6.0.0):
+    - CellularLocalStorage/Core (= 6.0.0)
+  - CellularLocalStorage/Core (6.0.0):
+    - CELLULAR/Locking (~> 6.0.0)
+  - CellularNetworking (6.1.0):
+    - CellularNetworking/Alamofire (= 6.1.0)
+    - CellularNetworking/Codable (= 6.1.0)
+  - CellularNetworking/Alamofire (6.1.0):
+    - Alamofire (~> 5.0.5)
+    - CellularNetworking/Core
+  - CellularNetworking/Codable (6.1.0):
+    - CellularNetworking/Core
+  - CellularNetworking/Core (6.1.0):
+    - CELLULAR/Locking (~> 6.0.0)
+  - CellularRemoteConfiguration (7.0.0):
+    - CellularRemoteConfiguration/Core (= 7.0.0)
+  - CellularRemoteConfiguration/Core (7.0.0):
+    - CellularLocalStorage (~> 6.0.0)
   - OHHTTPStubs (5.2.3):
     - OHHTTPStubs/Default (= 5.2.3)
   - OHHTTPStubs/Core (5.2.3)
@@ -30,17 +37,19 @@ PODS:
   - Unbox (2.4.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.7)
+  - Alamofire (~> 5.0)
+  - CellularNetworking (~> 6.1.0)
   - CellularRemoteConfiguration (from `../`)
   - OHHTTPStubs (~> 5.2.3)
   - OHHTTPStubs/Swift
   - Unbox (~> 2.4.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - CELLULAR
     - CellularLocalStorage
+    - CellularNetworking
     - OHHTTPStubs
     - Unbox
 
@@ -49,13 +58,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  CELLULAR: 6af608774a6d7fed3a77b998aac37e5c6750beec
-  CellularLocalStorage: a602d529be743e482d7eba48b8ed4f9d9d94ae3d
-  CellularRemoteConfiguration: 673f504c275f699c99c4b829559aea356190cc68
+  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
+  CELLULAR: fe2e39098f0d37e76611a26191d388a893f14eb0
+  CellularLocalStorage: 43cb05c482393fd506172809108cfd610d49e58b
+  CellularNetworking: ac9ebe73798e688ba0cd143e6a5492bc484569aa
+  CellularRemoteConfiguration: d598246942cda7c914c14d9d6ec53fcafcb000e8
   OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
 
-PODFILE CHECKSUM: 1a3a8cf585b779a5f9a524bb591292dd2b469a26
+PODFILE CHECKSUM: 04f881690255afc60d920b50c77ac9f32c79012f
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3
