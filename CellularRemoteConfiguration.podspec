@@ -27,5 +27,5 @@ Pod::Spec.new do |spec|
     end
 
     # Default Subspecs
-    spec.default_subspecs = 'Core', 'Networking'
+    spec.default_subspecs = 'Core'
 end
