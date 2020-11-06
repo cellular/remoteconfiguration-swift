@@ -7,26 +7,11 @@ PODS:
   - CellularLocalStorage/Core (4.2.0):
     - CELLULAR/Locking (~> 4.1.0)
     - CELLULAR/Result (~> 4.1.0)
-  - CellularNetworking (5.0.1):
-    - CellularNetworking/Alamofire (= 5.0.1)
-    - CellularNetworking/Codable (= 5.0.1)
-  - CellularNetworking/Alamofire (5.0.1):
-    - Alamofire (~> 4.7)
-    - CellularNetworking/Core
-  - CellularNetworking/Codable (5.0.1):
-    - CellularNetworking/Core
-  - CellularNetworking/Core (5.0.1):
-    - CELLULAR/Locking (~> 4.1.0)
-    - CELLULAR/Result (~> 4.1.0)
   - CellularRemoteConfiguration (5.0):
     - CellularRemoteConfiguration/Core (= 5.0)
-    - CellularRemoteConfiguration/Networking (= 5.0)
   - CellularRemoteConfiguration/Core (5.0):
     - CELLULAR/Result (~> 4.1)
     - CellularLocalStorage (~> 4.2)
-  - CellularRemoteConfiguration/Networking (5.0):
-    - CellularNetworking (~> 5.0)
-    - CellularRemoteConfiguration/Core
   - OHHTTPStubs (5.2.3):
     - OHHTTPStubs/Default (= 5.2.3)
   - OHHTTPStubs/Core (5.2.3)
@@ -56,7 +41,6 @@ SPEC REPOS:
     - Alamofire
     - CELLULAR
     - CellularLocalStorage
-    - CellularNetworking
     - OHHTTPStubs
     - Unbox
 
@@ -68,7 +52,6 @@ SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   CELLULAR: 6af608774a6d7fed3a77b998aac37e5c6750beec
   CellularLocalStorage: a602d529be743e482d7eba48b8ed4f9d9d94ae3d
-  CellularNetworking: d29a8ecd53c8ab9c6a835e06a10b6fb1ca9d6532
   CellularRemoteConfiguration: 673f504c275f699c99c4b829559aea356190cc68
   OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
   Unbox: c8b2ab69d3337597b4a3f47a0538807dc12db670
