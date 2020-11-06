@@ -13,11 +13,10 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/cellular/cellular-swift.git", from: "6.0.0"),
-        .package(url: "https://github.com/cellular/networking-swift.git", from: "6.1.0"),
         .package(url: "https://github.com/cellular/localstorage-swift.git", from: "6.0.0")
     ],
     targets: [
-        .target(name: "RemoteConfiguration", dependencies: ["CELLULAR", "Networking", "LocalStorage"]),
+        .target(name: "RemoteConfiguration", dependencies: ["CELLULAR", "LocalStorage"]),
         .testTarget(name: "RemoteConfigurationTests", dependencies: ["RemoteConfiguration"]),
     ]
 )

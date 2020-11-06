@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
-        "state": {
-          "branch": null,
-          "revision": "fca036f7aeca07124067cb6e0c12b0ad6359e3d4",
-          "version": "5.1.0"
-        }
-      },
-      {
         "package": "CELLULAR",
         "repositoryURL": "https://github.com/cellular/cellular-swift.git",
         "state": {
@@ -26,15 +17,6 @@
           "branch": null,
           "revision": "a3a3d7acbf8158e2c6463d280b749ae749ae8359",
           "version": "6.0.0"
-        }
-      },
-      {
-        "package": "Networking",
-        "repositoryURL": "https://github.com/cellular/networking-swift.git",
-        "state": {
-          "branch": null,
-          "revision": "95fd89e0f10ea33fd01c8dab0675317c3c70f059",
-          "version": "6.1.0"
         }
       }
     ]

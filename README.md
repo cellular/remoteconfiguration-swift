@@ -143,3 +143,8 @@ TODO
     }
 }
 ```
+## Update for version 7.0.0
+
+The dependency to CellularNetworking has been removed in this version.
+
+The adapter to bind RemoteConfiguration to CellularNetworking has been moved to ```Example/Example/Controller/RemoteConfiguration+Adapter.swift```. This adapter must be copied to the Application to bind RemoteConfiguration to CellularNetworking or any other networking clients like Alamofire or plain NSURLSession.
