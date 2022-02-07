@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
@@ -6,18 +6,32 @@ let package = Package(
     platforms: [
         .iOS(.v11),
         .tvOS(.v11),
-        .watchOS(.v5)
+        .watchOS(.v5),
+        .macOS(.v10_12)
     ],
     products: [
         .library(name: "RemoteConfiguration", targets: ["RemoteConfiguration"])
     ],
     dependencies: [
         .package(url: "https://github.com/cellular/cellular-swift.git", from: "6.0.0"),
-        .package(url: "https://github.com/cellular/networking-swift.git", from: "6.2.0"),
+        .package(url: "https://github.com/cellular/networking-swift.git", from: "6.3.0"),
         .package(url: "https://github.com/cellular/localstorage-swift.git", from: "6.0.0")
     ],
     targets: [
-        .target(name: "RemoteConfiguration", dependencies: ["CELLULAR", "Networking", "LocalStorage"]),
-        .testTarget(name: "RemoteConfigurationTests", dependencies: ["RemoteConfiguration"]),
+        .target(
+            name: "RemoteConfiguration",
+            dependencies: [
+                .product(name: "CELLULAR", package: "cellular-swift"),
+                .product(name: "Networking", package: "networking-swift"),
+                .product(name: "LocalStorage", package: "localstorage-swift"),
+            ]
+        ),
+        .testTarget(
+            name: "RemoteConfigurationTests",
+            dependencies: ["RemoteConfiguration"],
+            resources: [
+                .process("Resources"),
+            ]
+        )
     ]
 )

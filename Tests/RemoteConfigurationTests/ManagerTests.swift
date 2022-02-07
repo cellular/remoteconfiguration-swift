@@ -256,7 +256,7 @@ class ManagerTests: XCTestCase {
         manager.clearCache()
         XCTAssertNil(manager.cache.lastLoadedConfiguration, "ConfigurationCache not empty")
         manager.ignoreCache = true
-        manager.configurationBundle = Bundle(for: ManagerTests.self)
+        manager.configurationBundle = Bundle.module
         manager.configurationBundleFilename = "ignoreUpdate.json"
 
         // force provider request error; this should read previous configuration from cache
