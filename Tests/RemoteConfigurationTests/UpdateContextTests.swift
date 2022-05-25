@@ -7,6 +7,7 @@ class UpdateContextTests: XCTestCase {
     private let updateUrl = "http://nohost.com"
     private var languageCode: String { return Locale.current.languageCode ?? "en" }
     private var regionCode: String { return Locale.current.regionCode ?? "US" }
+    private let ignoreOSVersions = ["12", "13.1"]
 
     // MARK: - Ignore Update
 

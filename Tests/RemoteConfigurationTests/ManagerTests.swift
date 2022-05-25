@@ -102,6 +102,10 @@ class ManagerTests: XCTestCase {
                 "availableVersion": "1.2.1",
                 "url": "http://nohost.com",
                 "type": "mandatory",
+                "ignoredOSVersions": [
+                    "12",
+                    "13.1"
+                ],
                 "localizedStrings": [
                     [
                         "title": "title",
