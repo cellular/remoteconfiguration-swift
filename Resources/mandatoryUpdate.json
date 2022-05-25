@@ -7,6 +7,10 @@
     "availableVersion": "1.2",
     "url": "https://itunes.apple.com/",
     "type": "mandatory",
+    "ignoredOSVersions": [
+        "12",
+        "13.1"
+    ],
     "localizedStrings": [
       {
         "languageCode": "de",

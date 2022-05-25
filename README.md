@@ -126,6 +126,9 @@ TODO
         "availableVersion": "1.2.3",
         "url": "https://itunes.apple.com/theApp",
         "type": "mandatory",
+        "ignoredOSVersions": [
+            "12"
+        ],
         "localizedStrings": [
             {
                 "languageCode": "de",
@@ -148,3 +151,9 @@ TODO
 The dependency to CellularNetworking has been removed in this version.
 
 The adapter to bind RemoteConfiguration to CellularNetworking has been moved to ```Example/Example/Controller/RemoteConfiguration+Adapter.swift```. This adapter must be copied to the Application to bind RemoteConfiguration to CellularNetworking or any other networking clients like Alamofire or plain NSURLSession.
+
+
+## Update for version 8.0.0
+
+For mandatory updates it's now possible to ignore one or more iOS versions. iOS Versions contained in the array of "ignoredOSVersions" will not react to mandatory updates until the version is removed from the array. 
+This could be useful if you don't support special iOS versions anymore but the last working version should stil exist on the AppStore and should not be disabled by a mandatory update. If there is a breaking API change later on, you still have the ability to remove this version from the list and the mandatory update will be shown as usual.

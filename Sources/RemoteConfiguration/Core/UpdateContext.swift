@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 /// A class containing information on the Update status for the associated App. Will be created by the Manager during
 /// execution of requestConfiguration() using the requested Configuration dictionary.
@@ -8,6 +8,10 @@ import Foundation
 /// "appUpdate": {
 ///     "availableVersion": "1.6.0",
 ///     "type": "ignore",
+///     "ignoredOSVersions": [
+///         "12",
+///         "13.1"
+///     ],
 ///     "url": "https://itunes.apple.com/de/app/tv-spielfilm-tv-programm-mit-live-tv/id346997126?mt=8&at=11l4L8",
 ///     "localizedStrings": [
 ///         {
@@ -28,6 +32,19 @@ import Foundation
 ///     ]
 /// }
 /// ```
+
+/// Wrapper which holds information about the current system version and possibly ignored
+/// versions for mandatory updates
+public struct MandatoryVersioning: Codable, Equatable {
+    let systemVersion: String
+    let ignoredVersions: [String]
+
+    public init(systemVersion: String = UIDevice.current.systemVersion, ignoredVersions: [String]) {
+        self.systemVersion = systemVersion
+        self.ignoredVersions = ignoredVersions
+    }
+}
+
 public struct UpdateContext: Codable, Equatable {
 
     /// The URL to open on update action
@@ -45,6 +62,9 @@ public struct UpdateContext: Codable, Equatable {
     /// The associated update type, i.e. ignore, recommended, mandatory
     public internal(set) var updateType: UpdateType
 
+    /// Information about OS versions, which shouldn't be affected of a madatory update alert
+    public let mandatoryVersioning: MandatoryVersioning
+
     /// The alert (containing title, text and buttons) to be displayed in an update dialog
     public let localizedAlerts: [UpdateAlert]?
 
@@ -56,13 +76,15 @@ public struct UpdateContext: Codable, Equatable {
     ///   - availableVersion: The latest available version of the App
     ///   - alertFrequency: The frequency in which a 'recommended' update dialog should be presented
     ///   - updateType: The associated update type
+    ///   - mandatoryVersioning: information about iOS versions, which should not be affected by a mandatory update
     ///   - localizedAlerts: The alert to be displayed in an update dialog
     public init(updateUrl: String, availableVersion: String, alertFrequency: AlertFrequency,
-                updateType: UpdateType, localizedAlerts: [UpdateAlert]) {
+                updateType: UpdateType, mandatoryVersioning: MandatoryVersioning, localizedAlerts: [UpdateAlert]) {
         self.updateUrl = updateUrl
         self.availableVersion = availableVersion
         self.alertFrequency = alertFrequency
         self.updateType = updateType
+        self.mandatoryVersioning = mandatoryVersioning
         self.localizedAlerts = localizedAlerts
     }
 
@@ -72,6 +94,7 @@ public struct UpdateContext: Codable, Equatable {
     enum CodingKeys: String, CodingKey {
         case updateUrl = "url"
         case updateType = "type"
+        case ignoredOSVersions
         case availableVersion
         case localizedAlerts = "localizedStrings"
         case alertFrequency = "frequency"
@@ -88,6 +111,8 @@ public struct UpdateContext: Codable, Equatable {
         alertFrequency = try values.decodeIfPresent(AlertFrequency.self, forKey: .alertFrequency) ?? .always
         availableVersion = try values.decode(String.self, forKey: .availableVersion)
         updateType = try values.decodeIfPresent(UpdateType.self, forKey: .updateType) ?? .ignore
+        let ignoredOSVersions = try values.decodeIfPresent([String].self, forKey: .ignoredOSVersions) ?? []
+        mandatoryVersioning = MandatoryVersioning(ignoredVersions: ignoredOSVersions)
 
         // Decodes the update options (if any), allowing some to fail. Even none are allowed, if the update type is ignore.
         let optionalAlerts = try values.decodeIfPresent([UpdateAlert?].self, forKey: .localizedAlerts)
@@ -111,5 +136,15 @@ public struct UpdateContext: Codable, Equatable {
 
         // Alerts are valid.
         localizedAlerts = alerts
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(updateUrl, forKey: .updateUrl)
+        try container.encode(availableVersion, forKey: .availableVersion)
+        try container.encode(alertFrequency, forKey: .alertFrequency)
+        try container.encode(updateType, forKey: .updateType)
+        try container.encode(mandatoryVersioning.ignoredVersions, forKey: .ignoredOSVersions)
+        try container.encode(localizedAlerts, forKey: .localizedAlerts)
     }
 }

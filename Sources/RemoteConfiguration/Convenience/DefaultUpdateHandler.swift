@@ -25,10 +25,14 @@ public final class DefaultUpdateHandler {
     ///
     /// - Parameters:
     ///   - updateType: the associated UpdateType
+    ///   - mandatoryVersioning: information about iOS versions, which should not be affected by a mandatory update
     ///   - updateContext: the associated UpdateContext
     ///   - presentingViewController: the UIViewController on which to modally present the UIAlertController
-    public func updateAvailable(updateType: UpdateType, updateContext: UpdateContext,
-                                presentingViewController controller: UIViewController, completion: @escaping () -> Void) {
+    public func updateAvailable(updateType: UpdateType,
+                                mandatoryVersioning: MandatoryVersioning,
+                                updateContext: UpdateContext,
+                                presentingViewController controller: UIViewController,
+                                completion: @escaping () -> Void) {
 
         // handle update depending on update type
         switch updateType {
@@ -37,8 +41,18 @@ public final class DefaultUpdateHandler {
         case .recommended:
             handleRecommendedUpdate(updateContext: updateContext, presentingViewController: controller, completion: completion)
         case .mandatory:
-            handleMandatoryUpdate(updateContext: updateContext, presentingViewController: controller)
+            if canMandatoryUpdateBeIgnored(for: mandatoryVersioning) {
+                completion()
+            } else {
+                handleMandatoryUpdate(updateContext: updateContext,
+                                      presentingViewController: controller)
+            }
         }
+    }
+
+    internal func canMandatoryUpdateBeIgnored(for mandatoryVersioning: MandatoryVersioning) -> Bool {
+        // ignore update if systemVersion starts with one of the ignored versions
+        return mandatoryVersioning.ignoredVersions.contains(where: mandatoryVersioning.systemVersion.hasPrefix)
     }
 
     private func handleRecommendedUpdate(updateContext: UpdateContext, presentingViewController: UIViewController,
@@ -78,7 +92,8 @@ public final class DefaultUpdateHandler {
         presentingViewController.present(alertController, animated: true, completion: nil)
     }
 
-    private func handleMandatoryUpdate(updateContext: UpdateContext, presentingViewController: UIViewController) {
+    private func handleMandatoryUpdate(updateContext: UpdateContext,
+                                       presentingViewController: UIViewController) {
 
         let localizedAlert = updateContext.localizedAlerts?.option(forLocale: Locale.current)
         let title = localizedAlert?.title ?? "Update"
