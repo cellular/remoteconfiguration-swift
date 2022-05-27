@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.6.0
 import PackageDescription
 
 let package = Package(
@@ -16,7 +16,10 @@ let package = Package(
         .package(url: "https://github.com/cellular/localstorage-swift.git", from: "6.0.0")
     ],
     targets: [
-        .target(name: "RemoteConfiguration", dependencies: ["CELLULAR", "LocalStorage"]),
+        .target(name: "RemoteConfiguration", dependencies: [
+            .product(name: "CELLULAR", package: "cellular-swift"),
+            .product(name: "LocalStorage", package: "localstorage-swift")
+        ]),
         .testTarget(name: "RemoteConfigurationTests", dependencies: ["RemoteConfiguration"]),
     ]
 )
