@@ -39,7 +39,7 @@ public struct MandatoryVersioning: Codable, Equatable {
     let systemVersion: String
     let ignoredVersions: [String]
 
-    public init(systemVersion: String = UIDevice.current.systemVersion, ignoredVersions: [String]) {
+    public init(systemVersion: String = ProcessInfo().operatingSystemVersionString, ignoredVersions: [String]) {
         self.systemVersion = systemVersion
         self.ignoredVersions = ignoredVersions
     }
