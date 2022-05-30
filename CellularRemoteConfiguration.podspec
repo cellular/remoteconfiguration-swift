@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
-    spec.version       = '8.0.1'
-    spec.swift_version = '5.6.0'
+    spec.version       = '8.0.2'
+    spec.swift_version = '5.1'
     spec.module_name   = 'RemoteConfiguration'
     spec.name          = 'CellularRemoteConfiguration'
     spec.summary       = 'Dynamic configuration of iOS, tvOS or watchOS application using remote files.'
