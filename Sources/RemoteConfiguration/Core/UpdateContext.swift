@@ -39,7 +39,8 @@ public struct MandatoryVersioning: Codable, Equatable {
     let systemVersion: String
     let ignoredVersions: [String]
 
-    public init(systemVersion: String = ProcessInfo().operatingSystemVersionString, ignoredVersions: [String]) {
+    public init(systemVersion: String = "\(ProcessInfo().operatingSystemVersion.majorVersion).\(ProcessInfo().operatingSystemVersion.minorVersion).\(ProcessInfo().operatingSystemVersion.patchVersion)",
+                ignoredVersions: [String]) {
         self.systemVersion = systemVersion
         self.ignoredVersions = ignoredVersions
     }
