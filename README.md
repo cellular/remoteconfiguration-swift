@@ -157,3 +157,7 @@ The adapter to bind RemoteConfiguration to CellularNetworking has been moved to 
 
 For mandatory updates it's now possible to ignore one or more iOS versions. iOS Versions contained in the array of "ignoredOSVersions" will not react to mandatory updates until the version is removed from the array. 
 This could be useful if you don't support special iOS versions anymore but the last working version should stil exist on the AppStore and should not be disabled by a mandatory update. If there is a breaking API change later on, you still have the ability to remove this version from the list and the mandatory update will be shown as usual.
+
+## Update for version 8.0.3
+
+Adds support for Swift Version 6.0
