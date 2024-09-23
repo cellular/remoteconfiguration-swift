@@ -36,10 +36,11 @@ import UIKit
 /// Wrapper which holds information about the current system version and possibly ignored
 /// versions for mandatory updates
 public struct MandatoryVersioning: Codable, Equatable {
-    let systemVersion: String
-    let ignoredVersions: [String]
+    public let systemVersion: String
+    public let ignoredVersions: [String]
 
-    public init(systemVersion: String = ProcessInfo().operatingSystemVersionString, ignoredVersions: [String]) {
+    public init(systemVersion: String = "\(ProcessInfo().operatingSystemVersion.majorVersion).\(ProcessInfo().operatingSystemVersion.minorVersion).\(ProcessInfo().operatingSystemVersion.patchVersion)",
+                ignoredVersions: [String]) {
         self.systemVersion = systemVersion
         self.ignoredVersions = ignoredVersions
     }
