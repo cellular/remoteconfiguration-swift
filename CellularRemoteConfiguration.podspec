@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.version       = '8.0.3'
+    spec.version       = '8.0.5'
     spec.swift_version = '6.0'
     spec.module_name   = 'RemoteConfiguration'
     spec.name          = 'CellularRemoteConfiguration'
