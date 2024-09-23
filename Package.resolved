@@ -1,25 +1,24 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "CELLULAR",
-        "repositoryURL": "https://github.com/cellular/cellular-swift.git",
-        "state": {
-          "branch": null,
-          "revision": "2e1108028fb08424a870ad5406c4757e35810330",
-          "version": "6.0.1"
-        }
-      },
-      {
-        "package": "LocalStorage",
-        "repositoryURL": "https://github.com/cellular/localstorage-swift.git",
-        "state": {
-          "branch": null,
-          "revision": "a3a3d7acbf8158e2c6463d280b749ae749ae8359",
-          "version": "6.0.0"
-        }
+  "originHash" : "ec3f00793c4d6dda23fe19763dbea1cf8fd76d5610f0be7d426e46dd665e4013",
+  "pins" : [
+    {
+      "identity" : "cellular-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cellular/cellular-swift.git",
+      "state" : {
+        "revision" : "2e1108028fb08424a870ad5406c4757e35810330",
+        "version" : "6.0.1"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "localstorage-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cellular/localstorage-swift.git",
+      "state" : {
+        "revision" : "a3a3d7acbf8158e2c6463d280b749ae749ae8359",
+        "version" : "6.0.0"
+      }
+    }
+  ],
+  "version" : 3
 }

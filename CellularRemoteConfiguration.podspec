@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.version       = '8.0.4'
+    spec.version       = '8.0.5'
     spec.swift_version = '5.1'
     spec.module_name   = 'RemoteConfiguration'
     spec.name          = 'CellularRemoteConfiguration'
@@ -10,8 +10,8 @@ Pod::Spec.new do |spec|
     spec.source        = { :git => 'https://github.com/cellular/remoteconfiguration-swift.git', :tag => spec.version.to_s }
 
     # Deployment Targets
-    spec.ios.deployment_target     = '11.0'
-    spec.tvos.deployment_target    = '11.0'
+    spec.ios.deployment_target     = '12.0'
+    spec.tvos.deployment_target    = '12.0'
     spec.watchos.deployment_target = '5.0'
 
     # Core Subspec

@@ -15,5 +15,5 @@ public protocol Provider {
     /// - Parameter url: the URL from which the JSON should be requested
     /// - Parameter success: request success callback; the data parameter should represent the requested configuration JSON Data
     /// - Parameter failure: request failure callback; the error parameter shloud represent the cause of the failure
-    func request(with url: URL, success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) -> Request
+    func request(with url: URL, success: @escaping @Sendable (Data) -> Void, failure: @escaping @Sendable (Error) -> Void) -> Request
 }
